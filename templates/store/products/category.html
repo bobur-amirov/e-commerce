@@ -1,0 +1,38 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block content %}
+<main>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="pb-3 h5">{{ category.name|title }}</div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {% for product in products %}
+                <div class="col">
+                    <div class="card h-100" style="width: 60%">
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a class="text-dark text-decoration-none" href="{{product.get_absolute_url}}">{{ product.title }}</a>
+                            </h5>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+
+</main>
+{% endblock %}
