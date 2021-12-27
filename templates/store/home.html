@@ -6,7 +6,6 @@
 
 {% block content %}
 <main>
-
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
@@ -32,15 +31,16 @@
                         <img src="{{ product.image.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a class="text-dark text-decoration-none btn btn-outline-primary" href="{{product.get_absolute_url}}" >{{ product.title }}</a>
+                                <a class="text-dark text-decoration-none btn btn-outline-primary"
+                                   href="{{product.get_absolute_url}}">{{ product.title }}</a>
                             </h5>
                             <p class="card-text">{{ product.description }}</p>
                             <p class="card-text">{{ product.created }}</p>
                         </div>
-<!--                        <div class="card-body">-->
-<!--                            <a href="#" class="card-link">Card link</a>-->
-<!--                            <a href="#" class="card-link">Another link</a>-->
-<!--                        </div>-->
+                        <!--                        <div class="card-body">-->
+                        <!--                            <a href="#" class="card-link">Card link</a>-->
+                        <!--                            <a href="#" class="card-link">Another link</a>-->
+                        <!--                        </div>-->
                     </div>
                 </div>
                 {% endfor %}
