@@ -43,6 +43,12 @@
                             {% endfor %}
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'account:login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'account:register' %}">SignUp</a>
+                    </li>
                 </ul>
                 <a type="button" role="button" class="btn btn-outline-secondary"
                    href="{% url 'basket:basket_summary' %}">

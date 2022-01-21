@@ -1,1 +1,13 @@
-Dashboard page
+{% extends '../store/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ request.user }}
+{% endblock %}
+
+
+{% block content %}
+<main>
+    <h1>My Profile</h1>
+</main>
+{% endblock %}
